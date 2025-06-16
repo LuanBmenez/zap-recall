@@ -1,20 +1,14 @@
-import Home from "./components/Home";
-import Deckcards from "./components/DeckCards";
-import { useState } from 'react';
 
-
+import { Home } from './components/Home';
+import GlobalStyle from './styles/GlobalStyle'; 
 
 function App() {
-
-    const [deckAndMeta, setDeckAndMeta] = useState({deck:"", meta:""});
-    const [visible, setVisible] = useState(true);
-    
-    return (
-        <>
-            <Home visible={visible} setVisible={setVisible} deckAndMeta={deckAndMeta} setDeckAndMeta={setDeckAndMeta}/>
-            <Deckcards deckAndMeta={deckAndMeta} setDeckAndMeta={setDeckAndMeta} visible={visible} setVisible={setVisible}/>
-        </>
-    );
+  return (
+    <>
+      <GlobalStyle /> 
+      <Home />
+    </>
+  );
 }
 
-export default  App;
+export default App;
